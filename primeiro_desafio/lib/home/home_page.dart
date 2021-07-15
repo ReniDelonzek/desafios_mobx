@@ -6,14 +6,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.purple.shade800,
-          title: Center(child: Text('Desafio MobX')),
-        ),
-        body: ChipList(),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purple.shade800,
+        title: Center(child: Text('Desafio MobX')),
       ),
+      body: ChipList(),
     );
   }
 }
