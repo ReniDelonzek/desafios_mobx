@@ -5,19 +5,19 @@ class ChipList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-        child: Column(
-          children: [
-            Container(
-              color: Colors.green.shade600,
-              child: Row(
-                children: [],
-              ),
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+      child: Column(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.green.shade600,
+            child: Row(
+              children: [],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
