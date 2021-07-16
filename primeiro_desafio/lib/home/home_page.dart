@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.purple.shade800,
           title: Center(child: Text('Desafio MobX')),
         ),
-        body: ChipList(),
+        body: chipList(),
       ),
     );
   }

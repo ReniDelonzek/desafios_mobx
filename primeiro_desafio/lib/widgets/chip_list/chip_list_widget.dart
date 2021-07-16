@@ -1,63 +1,47 @@
 import 'package:flutter/material.dart';
 
-class ChipList extends StatelessWidget {
-  const ChipList({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-        child: Column(
-          children: [
-            Container(
-              color: Colors.green.shade600,
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    color: Colors.green.shade800,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 20),
-                          child: Text(
-                            "Lista 1",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.add, color: Colors.white),
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.add, color: Colors.white),
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.add, color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 60)
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+chipList() {
+  return Wrap(
+    spacing: 6,
+    runSpacing: 6,
+    children: [
+      Container(
+        height: 40,
+        padding: EdgeInsets.only(top: 15),
+        margin: EdgeInsets.only(left: 10),
+        child: Text(
+          "Lista ",
+          style: TextStyle(fontSize: 25),
         ),
       ),
-    );
-  }
+      Container(
+        height: 50,
+        width: 10,
+        child: VerticalDivider(
+          indent: 10,
+          color: Colors.green[200],
+        ),
+      ),
+      _buildChip("Opção", Color(0xFF64B5F6)),
+      _buildChip("Opção", Color(0xFF64B5F6)),
+      _buildChip("Opção", Color(0xFF64B5F6)),
+    ],
+  );
+}
+
+Widget _buildChip(String label, Color color) {
+  return Container(
+    margin: EdgeInsets.all(15),
+    decoration: BoxDecoration(
+        color: Colors.blue, borderRadius: BorderRadius.circular(6)),
+    constraints: BoxConstraints(
+      maxHeight: 30,
+      maxWidth: 60,
+    ),
+    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 2),
+    child: Text(
+      label,
+      style: TextStyle(color: Colors.white, fontSize: 18),
+    ),
+  );
 }
