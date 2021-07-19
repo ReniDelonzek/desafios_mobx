@@ -11,7 +11,7 @@ abstract class _ItemModelBase with Store {
   bool value = false;
 
   @action
-  Verify() {
+  verify() {
     if (value = true) ;
     {
       color = Colors.white;

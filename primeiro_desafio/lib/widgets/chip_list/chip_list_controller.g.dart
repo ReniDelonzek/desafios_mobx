@@ -24,20 +24,6 @@ mixin _$ItemModel on _ItemModelBase, Store {
     });
   }
 
-  final _$_ItemModelBaseActionController =
-      ActionController(name: '_ItemModelBase');
-
-  @override
-  dynamic Verify() {
-    final _$actionInfo = _$_ItemModelBaseActionController.startAction(
-        name: '_ItemModelBase.Verify');
-    try {
-      return super.Verify();
-    } finally {
-      _$_ItemModelBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
   @override
   String toString() {
     return '''
