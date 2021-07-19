@@ -10,6 +10,7 @@ abstract class _ItemModelBase with Store {
   @observable
   bool value = false;
 
+  /// TODO sempre começar funções com letra minúscula
   Verify() {
     if (value = true) ;
     {
@@ -20,7 +21,4 @@ abstract class _ItemModelBase with Store {
       color = color;
     }
   }
-
-  @action
-  ;
 }
