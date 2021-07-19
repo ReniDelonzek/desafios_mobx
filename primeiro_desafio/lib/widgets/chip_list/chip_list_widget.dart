@@ -30,18 +30,23 @@ chipList() {
 }
 
 Widget _buildChip(String label, Color color) {
-  return Container(
-    margin: EdgeInsets.all(15),
-    decoration: BoxDecoration(
-        color: Colors.blue, borderRadius: BorderRadius.circular(6)),
-    constraints: BoxConstraints(
-      maxHeight: 30,
-      maxWidth: 60,
-    ),
-    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 2),
-    child: Text(
-      label,
-      style: TextStyle(color: Colors.white, fontSize: 18),
+  return GestureDetector(
+    onTap: () {},
+    child: Container(
+      margin: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(color: Colors.blue, width: 2)),
+      constraints: BoxConstraints(
+        maxHeight: 30,
+        maxWidth: 60,
+      ),
+      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 2),
+      child: Text(
+        label,
+        style: TextStyle(color: Colors.white, fontSize: 18),
+      ),
     ),
   );
 }

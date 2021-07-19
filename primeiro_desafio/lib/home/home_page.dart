@@ -12,7 +12,11 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.purple.shade800,
           title: Center(child: Text('Desafio MobX')),
         ),
-        body: chipList(),
+        body: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (_, index) {
+               return chipList();
+            }),
       ),
     );
   }
