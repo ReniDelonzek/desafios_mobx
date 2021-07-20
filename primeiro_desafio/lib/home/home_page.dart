@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         body: ListView.builder(
             itemCount: 10,
             itemBuilder: (_, index) {
-               return chipList();
+              return ChipListWidget();
             }),
       ),
     );

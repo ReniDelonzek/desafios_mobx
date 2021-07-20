@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:primeiro_desafio/home/home_page.dart';
 
 void main() {
